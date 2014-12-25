@@ -16,15 +16,22 @@ public class MainActivity extends SlidingFragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
+	
+	//设置无标题
 	this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+	//设置布局文件
 	setContentView(R.layout.main);
+	
+	//
 	imgbtn_top_left = (ImageButton) this.findViewById(R.id.imgbtn_top_left);
 	imgbtn_top_left.setOnClickListener(new OnClickListener() {
 	    @Override
 	    public void onClick(View v) {
-		toggle();// 尽心SlidingMenu的打开与关闭
+		//尽心SlidingMenu的打开与关闭
+		toggle();
 	    }
 	});
+	
 	// 初始化滑动菜单
 	initSlidingMenu(savedInstanceState);
     }
